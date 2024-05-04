@@ -1,7 +1,7 @@
 # --IN PROGRESS-- Project-4: House Price Prediction using various ML techniques :house_with_garden:	
 
 <p align="center">
-  <img width="400" height="400" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/house_pic.jpg">
+  <img width="550" height="550" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/house_pic.jpg">
 </p>
 
 ## Table of Contents
@@ -36,8 +36,8 @@ This project focuses on developing a predictive model for housing prices using v
 | K-Nearest Neighbors Regressor Model  | 0.2006  |
 | Simple Average Blend  | 0.1631  |
 
-<p align="center">
-  <img width="500" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
+<p align="left">
+  <img width="850" height="650" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
 </p>
 
 1. **Gradient Boosting Model (0.1431):**
@@ -128,7 +128,7 @@ Both the train and test datasets are quite consistent in terms of the types of f
 - **FullBath**: Full bathrooms above grade
 
 <p align="center">
-  <img width="600" height="600" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/fields_price_correlation.jpg">
+  <img width="800" height="800" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/fields_price_correlation.jpg">
 </p>
 
 ## Data Source
