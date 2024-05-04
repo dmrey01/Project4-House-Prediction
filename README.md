@@ -18,7 +18,7 @@
 11. [Conclusion](#Conclusion)
 
 ## Project Overview
-This project focuses on developing a predictive model for housing prices using various machine learning techniques. **The primary goal is to accurately predict house sales prices based on a comprehensive dataset that includes numerous features related to property characteristics such as area, quality, condition, and location.**
+This project focuses on developing a predictive model for housing prices using various machine learning techniques. The primary goal is to **accurately predict house sales prices based on a comprehensive dataset that includes numerous features related to property characteristics** such as area, quality, condition, and location.
 
 ## Results Summary
 
@@ -37,7 +37,7 @@ This project focuses on developing a predictive model for housing prices using v
 | Simple Average Blend  | 0.1631  |
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/house_pic.jpg">
+  <img width="500" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
 </p>
 
 1. **Gradient Boosting Model (0.1431):**
@@ -98,12 +98,14 @@ The datasets utilized in this project contains detailed information on residenti
 
 ### Test Dataset Analysis
 
-The test.csv dataset includes data on 1,459 properties with the same 80 features as in the train.csv dataset (excluding SalePrice). Here are some key observations:
+The test.csv dataset includes data on **1,459 properties with the same 80 features** as in the train.csv dataset (excluding SalePrice). Here are some key observations:
 
-General Structure
-Total Entries: 1,459
-Total Features: 80 (one less than the train set due to the absence of the target variable SalePrice).
-Data Completeness
+**General Structure**
+- **Total Entries:** 1,459
+
+- **Total Features:** 80 (one less than the train set due to the absence of the target variable SalePrice).
+
+**Data Completeness**
 Missing Data: As with the train dataset, there are several features with missing values:
 LotFrontage: 227 missing values.
 Alley: 1,352 missing values (indicating similar absence of alley access as in the train set).
@@ -126,13 +128,13 @@ Both the train and test datasets are quite consistent in terms of the types of f
 - **FullBath**: Full bathrooms above grade
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/house_pic.jpg">
+  <img width="600" height="600" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/fields_price_correlation.jpg">
 </p>
 
 ## Data Source
-| Data Source  | Usage |
+| Data Source  | Description |
 | ------------- | ------------- |
-| [Arabica Coffee Dataset - St. Louis FED](https://fred.stlouisfed.org/series/PCOFFOTMUSDM)  | Coffee prices since 1990s to present day for Arabica  |
+| [House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)  | Predict sales prices and practice feature engineering, RFs, and gradient boosting  |
 
 ## Tech Stack
 | Name  | Usage |
