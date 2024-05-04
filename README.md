@@ -5,12 +5,17 @@
 </p>
 
 ## Table of Contents
-1. [Tech Stack](#1-tech-stack)
-2. [Data Sources](#2-data-sources)
-3. [Background](#3-background)
-4. [What is El Nino and La Nina?](#4-what-is-el-nino-and-la-nina)
-5. [EDA Notebooks](#5-eda-notebooks)
-6. [Conclusion](#6-conclusion)
+1. [Project Overview](#project-overview)
+2. [Results Summary](#results-summary)
+3. [Dataset](#dataset)
+4. [Data Source](#data-source)
+5. [Tech Stack](#tech stack)
+6. [Exploratory Data Analysis](#exploratory-data-analysis)
+7. [Data Visualizations](#data-visualization)
+8. [Machine Learning Modeling](#machine-learning-modeling)
+9. [Blending All Modles](#blending-all-models)
+9. [ML Modeling Summary Statistics](#ml-modeling-summary-statistics)
+10. [Conclusion](#Conclusion)
 
 ## Project Overview
 This project focuses on developing a predictive model for housing prices using various machine learning techniques. **The primary goal is to accurately predict house sales prices based on a comprehensive dataset that includes numerous features related to property characteristics such as area, quality, condition, and location.**
@@ -24,16 +29,6 @@ RMSE Calculations and Top Models:
 - The Lasso Regression model stood out its implementation and detailed analysis.
 - The Random Forest model was also highlighted due to its low RMSE value.
 
-
-## Tech Stack
-| Python Library  | Usage |
-| ------------- | ------------- |
-|![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/8841ac4f-3cbe-49c0-a2f4-c0acb1100224)  | Data manipulation and analysis  |
-| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/4bf0c856-4875-4ff1-8ebd-03c0e66ebd14) | Numerical computations  |
-| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/0edbd134-7e50-4c13-9a74-4f6b8350ba57) | 2D plotting  |
-| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/76cae272-4bcc-4ab2-a376-880cd1d28190) | High-level plotting API   |
-| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/3e7c0369-6e67-4080-81bc-ee7d214f80c0) |  Scientific and technical computing  |
-
 ## Dataset
 The dataset utilized in this project contains detailed information on residential home sales. It includes a wide range of features, such as:
 
@@ -45,12 +40,22 @@ The dataset utilized in this project contains detailed information on residentia
 
 These and many other features provide a nuanced view of each home's attributes, contributing significantly to the model's predictive capabilities.
 
-## Data Sources
+## Data Source
 | Data Source  | Usage |
 | ------------- | ------------- |
 | [Arabica Coffee Dataset - St. Louis FED](https://fred.stlouisfed.org/series/PCOFFOTMUSDM)  | Coffee prices since 1990s to present day for Arabica  |
 
-## Models Used
+## Tech Stack
+| Name  | Usage |
+| ------------- | ------------- |
+|![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/8841ac4f-3cbe-49c0-a2f4-c0acb1100224)  | Data manipulation and analysis  |
+| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/4bf0c856-4875-4ff1-8ebd-03c0e66ebd14) | Numerical computations  |
+| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/0edbd134-7e50-4c13-9a74-4f6b8350ba57) | 2D plotting  |
+| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/76cae272-4bcc-4ab2-a376-880cd1d28190) | High-level plotting API   |
+| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/3e7c0369-6e67-4080-81bc-ee7d214f80c0) |  Scientific and technical computing  |
+
+
+## Machine Learning Modeling
 Several models were explored and evaluated for their effectiveness in predicting house prices:
 
 Lasso Regression: Utilized for its ability to perform feature selection by shrinking the coefficients of less important features to zero.
@@ -71,6 +76,7 @@ Optimization: Parameter tuning was performed, particularly for the Random Forest
 - Ensemble Methods
     - RandomForest / XGBoost / LGBM / CatBoost
 
+## Summary Statistics
 
 ## Conclusion
 This project successfully demonstrates the application of advanced machine learning techniques to real-world data. The models developed not only provide accurate predictions of house prices but also offer insights into the factors that most significantly affect residential property values.
