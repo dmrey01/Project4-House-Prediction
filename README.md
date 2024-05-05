@@ -321,22 +321,10 @@ Both the train and test datasets are quite consistent in terms of the types of f
 
 ## Exploratory Data Analysis (EDA)
 
+**Check distribution of target variable**
 ```ruby
-# Check distribution of target variable
 print(train_df['SalePrice'].describe())
 ```
-```ruby
-count      1460.000000
-mean     180921.195890
-std       79442.502883
-min       34900.000000
-25%      129975.000000
-50%      163000.000000
-75%      214000.000000
-max      755000.000000
-Name: SalePrice, dtype: float64
-```
-
 ```python
 count      1460.000000
 mean     180921.195890
@@ -349,26 +337,28 @@ max      755000.000000
 Name: SalePrice, dtype: float64
 ```
 
+**List quantitative fields**
 ```ruby
-# List quantitative fields
 print(quantitative)
 ```
-
+```python
 ['MSSubClass', 'LotFrontage', 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'MasVnrArea', 'BsmtFinSF1', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'TotRmsAbvGrd', 'Fireplaces', 'GarageYrBlt', 'GarageCars', 'GarageArea', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'MiscVal', 'MoSold', 'YrSold']
-
-
-```ruby
-# List qualitative fields
-print(qualitative)
 ```
 
-['MSZoning', 'Street', 'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType', 'HouseStyle', 'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrType', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinType2', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', 'KitchenQual', 'Functional', 'FireplaceQu', 'GarageType', 'GarageFinish', 'GarageQual', 'GarageCond', 'PavedDrive', 'PoolQC', 'Fence', 'MiscFeature', 'SaleType', 'SaleCondition']
-
+**List qualitative fields**
 ```ruby
-# Check for missing values
+print(qualitative)
+```
+```python
+['MSZoning', 'Street', 'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType', 'HouseStyle', 'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrType', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinType2', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', 'KitchenQual', 'Functional', 'FireplaceQu', 'GarageType', 'GarageFinish', 'GarageQual', 'GarageCond', 'PavedDrive', 'PoolQC', 'Fence', 'MiscFeature', 'SaleType', 'SaleCondition']
+```
+
+**Check for missing values**
+```ruby
 print(train_df.isnull().sum())
 ```
 
+```python
 Id                 0
 MSSubClass         0
 MSZoning           0
@@ -381,13 +371,13 @@ SaleType           0
 SaleCondition      0
 SalePrice          0
 Length: 81, dtype: int64
-
-
-```ruby
-# Number of unique values in each column
-print(train_df.nunique())
 ```
 
+**Number of unique values in each column**
+```ruby
+print(train_df.nunique())
+```
+```python
 Id               1460
 MSSubClass         15
 MSZoning            5
@@ -400,24 +390,25 @@ SaleType            9
 SaleCondition       6
 SalePrice         663
 Length: 81, dtype: int64
-
+```
 
 ## Data Visualizations
+
+**Histograms for each numerical column, *train* dataset**
 
 ```ruby
 train_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8, color='green');
 ```
 ![alt text](4.Other/image-1.png)
 
+**Histograms for each numerical column, *test* dataset**
 ```ruby
 test_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8);
 ```
 ![alt text](4.Other/image-2.png)
 
-
+**Histogram of SalePrice**
 ```ruby
-# Histogram of SalePrice
-
 # Load the dataset
 data = pd.read_csv('train.csv')
 
@@ -431,9 +422,8 @@ plt.show()
 
 ![alt text](4.Other/image-3.png)
 
+**Boxplot of SalePrice by OverallQual**
 ```ruby
-# Boxplot of SalePrice by OverallQual
-
 # Load the dataset
 data = pd.read_csv('train.csv')
 
@@ -447,9 +437,8 @@ plt.show()
 
 ![alt text](4.Other/image-4.png)
 
+**Correlation matrix**
 ```ruby
-# Correlation matrix
-
 # Load the dataset
 data = pd.read_csv('train.csv')
 
@@ -465,9 +454,8 @@ plt.show()
 
 ![alt text](4.Other/image-5.png)
 
+**Pairplot for selected features**
 ```ruby
-# Pairplot for selected features
-
 # Load the dataset
 data = pd.read_csv('train.csv')
 
@@ -477,9 +465,8 @@ plt.show()
 
 ![alt text](4.Other/image-6.png)
 
+**Scatter Plot of TotalBsmtSF vs 1stFlrSF**
 ```ruby
-#  Scatter Plot of TotalBsmtSF vs 1stFlrSF
-
 test_df = pd.read_csv('test.csv')
 
 # Set plot style
@@ -496,9 +483,8 @@ plt.show()
 
 ![alt text](4.Other/image-7.png)
 
+**Scatter Plot of YearBuilt vs GrLivArea**
 ```ruby
-#  Scatter Plot of YearBuilt vs GrLivArea
-
 test_df = pd.read_csv('test.csv')
 
 # Set plot style
