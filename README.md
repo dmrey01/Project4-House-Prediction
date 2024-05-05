@@ -279,95 +279,36 @@ print(test_df.info())
 print("***Test dataset shape is {}***".format(test_df.shape))
 ```
 
-RangeIndex: 1459 entries, 0 to 1458
-Data columns (total 80 columns):
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1460 entries, 0 to 1459
+Data columns (total 81 columns):
  #   Column         Non-Null Count  Dtype  
 ---  ------         --------------  -----  
- 0   Id             1459 non-null   int64  
- 1   MSSubClass     1459 non-null   int64  
- 2   MSZoning       1455 non-null   object 
- 3   LotFrontage    1232 non-null   float64
- 4   LotArea        1459 non-null   int64  
- 5   Street         1459 non-null   object 
- 6   Alley          107 non-null    object 
- 7   LotShape       1459 non-null   object 
- 8   LandContour    1459 non-null   object 
- 9   Utilities      1457 non-null   object 
- 10  LotConfig      1459 non-null   object 
- 11  LandSlope      1459 non-null   object 
- 12  Neighborhood   1459 non-null   object 
- 13  Condition1     1459 non-null   object 
- 14  Condition2     1459 non-null   object 
- 15  BldgType       1459 non-null   object 
- 16  HouseStyle     1459 non-null   object 
- 17  OverallQual    1459 non-null   int64  
- 18  OverallCond    1459 non-null   int64  
- 19  YearBuilt      1459 non-null   int64  
- 20  YearRemodAdd   1459 non-null   int64  
- 21  RoofStyle      1459 non-null   object 
- 22  RoofMatl       1459 non-null   object 
- 23  Exterior1st    1458 non-null   object 
- 24  Exterior2nd    1458 non-null   object 
- 25  MasVnrType     565 non-null    object 
- 26  MasVnrArea     1444 non-null   float64
- 27  ExterQual      1459 non-null   object 
- 28  ExterCond      1459 non-null   object 
- 29  Foundation     1459 non-null   object 
- 30  BsmtQual       1415 non-null   object 
- 31  BsmtCond       1414 non-null   object 
- 32  BsmtExposure   1415 non-null   object 
- 33  BsmtFinType1   1417 non-null   object 
- 34  BsmtFinSF1     1458 non-null   float64
- 35  BsmtFinType2   1417 non-null   object 
- 36  BsmtFinSF2     1458 non-null   float64
- 37  BsmtUnfSF      1458 non-null   float64
- 38  TotalBsmtSF    1458 non-null   float64
- 39  Heating        1459 non-null   object 
- 40  HeatingQC      1459 non-null   object 
- 41  CentralAir     1459 non-null   object 
- 42  Electrical     1459 non-null   object 
- 43  1stFlrSF       1459 non-null   int64  
- 44  2ndFlrSF       1459 non-null   int64  
- 45  LowQualFinSF   1459 non-null   int64  
- 46  GrLivArea      1459 non-null   int64  
- 47  BsmtFullBath   1457 non-null   float64
- 48  BsmtHalfBath   1457 non-null   float64
- 49  FullBath       1459 non-null   int64  
- 50  HalfBath       1459 non-null   int64  
- 51  BedroomAbvGr   1459 non-null   int64  
- 52  KitchenAbvGr   1459 non-null   int64  
- 53  KitchenQual    1458 non-null   object 
- 54  TotRmsAbvGrd   1459 non-null   int64  
- 55  Functional     1457 non-null   object 
- 56  Fireplaces     1459 non-null   int64  
- 57  FireplaceQu    729 non-null    object 
- 58  GarageType     1383 non-null   object 
- 59  GarageYrBlt    1381 non-null   float64
- 60  GarageFinish   1381 non-null   object 
- 61  GarageCars     1458 non-null   float64
- 62  GarageArea     1458 non-null   float64
- 63  GarageQual     1381 non-null   object 
- 64  GarageCond     1381 non-null   object 
- 65  PavedDrive     1459 non-null   object 
- 66  WoodDeckSF     1459 non-null   int64  
- 67  OpenPorchSF    1459 non-null   int64  
- 68  EnclosedPorch  1459 non-null   int64  
- 69  3SsnPorch      1459 non-null   int64  
- 70  ScreenPorch    1459 non-null   int64  
- 71  PoolArea       1459 non-null   int64  
- 72  PoolQC         3 non-null      object 
- 73  Fence          290 non-null    object 
- 74  MiscFeature    51 non-null     object 
- 75  MiscVal        1459 non-null   int64  
- 76  MoSold         1459 non-null   int64  
- 77  YrSold         1459 non-null   int64  
- 78  SaleType       1458 non-null   object 
- 79  SaleCondition  1459 non-null   object 
+ 0   Id             1460 non-null   int64  
+ 1   MSSubClass     1460 non-null   int64  
+ 2   MSZoning       1460 non-null   object 
+ 3   LotFrontage    1201 non-null   float64
+ 4   LotArea        1460 non-null   int64  
+ 5   Street         1460 non-null   object 
+ 6   Alley          91 non-null     object 
+ 7   LotShape       1460 non-null   object 
+ 8   LandContour    1460 non-null   object 
+ 9   Utilities      1460 non-null   object 
+ 10  LotConfig      1460 non-null   object 
+ 11  LandSlope      1460 non-null   object 
+ 12  Neighborhood   1460 non-null   object 
+ 13  Condition1     1460 non-null   object 
+ 14  Condition2     1460 non-null   object 
+ 15  BldgType       1460 non-null   object 
+ 16  HouseStyle     1460 non-null   object 
+ 17  OverallQual    1460 non-null   int64  
+ 18  OverallCond    1460 non-null   int64  
+ 19  YearBuilt      1460 non-null   int64  
+...
 dtypes: float64(11), int64(26), object(43)
 memory usage: 912.0+ KB
 None
 ***Test dataset shape is (1459, 80)***
-
 
 ### Summary and Insights 
 
@@ -381,7 +322,7 @@ Both the train and test datasets are quite consistent in terms of the types of f
 - **TotalBsmtSF**: Total square feet of basement area
 - **FullBath**: Full bathrooms above grade
 
-![alt text](image-3.png)
+![alt text](image.png)
 
 ## Data Source
 | Data Source  | Description |
@@ -403,6 +344,75 @@ Both the train and test datasets are quite consistent in terms of the types of f
 
 ## Exploratory Data Analysis (EDA)
 
+```ruby
+# Check distribution of target variable
+print(train_df['SalePrice'].describe())
+```
+
+count      1460.000000
+mean     180921.195890
+std       79442.502883
+min       34900.000000
+25%      129975.000000
+50%      163000.000000
+75%      214000.000000
+max      755000.000000
+Name: SalePrice, dtype: float64
+
+```ruby
+# List quantitative fields
+print(quantitative)
+```
+
+['MSSubClass', 'LotFrontage', 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'MasVnrArea', 'BsmtFinSF1', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'TotRmsAbvGrd', 'Fireplaces', 'GarageYrBlt', 'GarageCars', 'GarageArea', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'MiscVal', 'MoSold', 'YrSold']
+
+
+```ruby
+# List qualitative fields
+print(qualitative)
+```
+
+['MSZoning', 'Street', 'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType', 'HouseStyle', 'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrType', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinType2', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', 'KitchenQual', 'Functional', 'FireplaceQu', 'GarageType', 'GarageFinish', 'GarageQual', 'GarageCond', 'PavedDrive', 'PoolQC', 'Fence', 'MiscFeature', 'SaleType', 'SaleCondition']
+
+```ruby
+# Check for missing values
+print(train_df.isnull().sum())
+```
+
+Id                 0
+MSSubClass         0
+MSZoning           0
+LotFrontage      259
+LotArea            0
+                ... 
+MoSold             0
+YrSold             0
+SaleType           0
+SaleCondition      0
+SalePrice          0
+Length: 81, dtype: int64
+
+
+```ruby
+# Number of unique values in each column
+print(train_df.nunique())
+```
+
+Id               1460
+MSSubClass         15
+MSZoning            5
+LotFrontage       110
+LotArea          1073
+                 ... 
+MoSold             12
+YrSold              5
+SaleType            9
+SaleCondition       6
+SalePrice         663
+Length: 81, dtype: int64
+
+
+## Data Visualizations
 
 ```ruby
 train_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8, color='green');
@@ -412,10 +422,108 @@ train_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8, color='gree
 ```ruby
 test_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8);
 ```
-
 ![alt text](image-2.png)
 
-## Data Visualizations
+
+```ruby
+# Histogram of SalePrice
+
+# Load the dataset
+data = pd.read_csv('train.csv')
+
+plt.figure(figsize=(10, 6))
+sns.histplot(train_df['SalePrice'], kde=True)
+plt.title('Distribution of Sale Prices')
+plt.xlabel('Sale Price')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+![alt text](image-3.png)
+
+```ruby
+# Boxplot of SalePrice by OverallQual
+
+# Load the dataset
+data = pd.read_csv('train.csv')
+
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='OverallQual', y='SalePrice', data=train_df)
+plt.title('Sale Price by Overall Quality')
+plt.xlabel('Overall Quality')
+plt.ylabel('Sale Price')
+plt.show()
+```
+
+![alt text](image-4.png)
+
+```ruby
+# Ensure only numerical columns are considered for the correlation matrix
+
+# Load the dataset
+data = pd.read_csv('train.csv')
+
+numerical_cols = train_df.select_dtypes(include=[np.number])
+correlation_matrix = numerical_cols.corr()
+
+# Generate the heatmap
+plt.figure(figsize=(12, 10))
+sns.heatmap(correlation_matrix, annot=False, cmap='coolwarm')
+plt.title('Feature Correlation Matrix')
+plt.show()
+```
+
+![alt text](image-5.png)
+
+```ruby
+# Pairplot for selected features
+
+# Load the dataset
+data = pd.read_csv('train.csv')
+
+sns.pairplot(train_df[['SalePrice', 'OverallQual', 'GrLivArea', 'GarageCars']])
+plt.show()
+```
+
+![alt text](image-6.png)
+
+```ruby
+#  Scatter Plot of TotalBsmtSF vs 1stFlrSF
+
+test_df = pd.read_csv('test.csv')
+
+# Set plot style
+sns.set(style="whitegrid")
+
+# Scatter Plot of TotalBsmtSF vs 1stFlrSF
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=data, x='TotalBsmtSF', y='1stFlrSF')
+plt.title('Scatter plot of TotalBsmtSF vs. 1stFlrSF')
+plt.xlabel('Total Basement Area (sq ft)')
+plt.ylabel('First Floor Area (sq ft)')
+plt.show()
+```
+
+![alt text](image-7.png)
+
+```ruby
+#  Scatter Plot of YearBuilt vs GrLivArea
+
+test_df = pd.read_csv('test.csv')
+
+# Set plot style
+sns.set(style="whitegrid")
+
+# Scatter Plot of YearBuilt vs GrLivArea
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=data, x='YearBuilt', y='GrLivArea')
+plt.title('Scatter plot of YearBuilt vs. GrLivArea')
+plt.xlabel('Year Built')
+plt.ylabel('Ground Living Area (sq ft)')
+plt.show()
+```
+
+![alt text](image-8.png)
 
 ## Machine Learning Modeling
 :
