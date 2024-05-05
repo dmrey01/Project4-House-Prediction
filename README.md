@@ -27,7 +27,7 @@ Several models were explored and evaluated for their effectiveness in predicting
 **Key Results**
 - **Model Comparison:** The models were evaluated based on the **Root Mean Square Error (RMSE)**, with the *Gradient Boosting, Lasso Regression and Random Forest models* showing particularly promising results.
 - **Feature Importance:** Analysis revealed that certain features, such as *OverallQual and GrLivArea*, were highly predictive of house prices, guiding feature selection and engineering efforts.
-- **Optimization:** **Parameter tuning was performed**, particularly for the Random Forest and Gradient Boosting models, to enhance model accuracy and efficiency.
+- **Optimization:** **Parameter tuning was performed**, particularly for the *Random Forest and Gradient Boosting models*, to enhance model accuracy and efficiency.
 
 ### Performance Table
 
@@ -44,7 +44,7 @@ Several models were explored and evaluated for their effectiveness in predicting
 | Simple Average Blend  | 0.1631  |
 
 <p align="left">
-  <img width="850" height="650" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
+  <img width="800" height="600" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
 </p>
 
 ### Model Comparison
@@ -144,11 +144,22 @@ Both the train and test datasets are quite consistent in terms of the types of f
 | ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/scikit.jpg) | Machine learning library   |
 | ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/seaborn.jpg) | Library for creating statistical graphics and visualizing data  |
 | ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/tableau.jpg) | Visual analytics platform  |
-| ![image]() | Hosted Jupyter Notebook service  |
-| ![image]() | Presentation program  |
-| ![image]() | Developer platform  |
+| ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/google_colab.jpg) | Hosted Jupyter Notebook service  |
+| ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/power_point.jpg) | Presentation program  |
+| ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/github.jpg) | Developer platform  |
 
 ## Exploratory Data Analysis (EDA)
+
+```ruby
+train_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8, color='green');
+```
+![alt text](image-1.png)
+
+```ruby
+test_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8);
+```
+
+![alt text](image-2.png)
 
 ## Data Visualizations
 
