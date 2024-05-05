@@ -10,7 +10,7 @@
 3. [Dataset](#dataset)
 4. [Data Source](#data-source)
 5. [Tech Stack](#tech-stack)
-6. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-(eda))
+6. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 7. [Data Visualizations](#data-visualizations)
 8. [Machine Learning Modeling](#machine-learning-modeling)
 9. [Blending All Models](#blending-all-models)
@@ -29,7 +29,7 @@ Several models were explored and evaluated for their effectiveness in predicting
 - **Feature Importance:** Analysis revealed that certain features, such as *OverallQual and GrLivArea*, were highly predictive of house prices, guiding feature selection and engineering efforts.
 - **Optimization:** **Parameter tuning was performed**, particularly for the *Random Forest and Gradient Boosting models*, to enhance model accuracy and efficiency.
 
-### Performance Table
+## Performance Table
 
 | **ML Technique**  | **RMSE Error** |
 | ------------- | ------------- |
@@ -44,10 +44,10 @@ Several models were explored and evaluated for their effectiveness in predicting
 | Simple Average Blend  | 0.1631  |
 
 <p align="left">
-  <img width="800" height="600" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
+  <img width="650" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
 </p>
 
-### Model Comparison
+### Model Summary with RMSE Error
 
 1. **Gradient Boosting Model (0.1431):**
 - **Performance:** Best performing model.
@@ -84,7 +84,7 @@ Several models were explored and evaluated for their effectiveness in predicting
 ## Dataset
 The datasets utilized in this project contains detailed information on residential home sales reported in **Ames, Iowa**. Datasets are broken up into two parts: **train and test**.
 
-### Train Dataset Analysis
+### 1. Train Dataset Analysis
 
 **The train.csv dataset includes data on 1,460 properties, described by 81 features.** Here are some key insights and observations:
 
@@ -105,7 +105,11 @@ The datasets utilized in this project contains detailed information on residenti
 - Many features are **categorical** (e.g., Street, LotShape, Utilities), requiring encoding for machine learning applications.
 - **Numeric** data spans across discrete and continuous variables, with different scales and distributions, which may need standardization or normalization.
 
-### Test Dataset Analysis
+<p align="left">
+  <img width="650" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/dataset_basic_info.jpg">
+</p>
+
+### 2. Test Dataset Analysis
 
 The test dataset includes data on **1,459 properties with the same 80 features** as in the train dataset (excluding *SalePrice*). Here are some key observations:
 
@@ -113,6 +117,10 @@ The test dataset includes data on **1,459 properties with the same 80 features**
 - **Total Entries:** 1,459
 
 - **Total Features:** 80 (one less than the train set due to the absence of the target variable SalePrice).
+
+<p align="left">
+  <img width="650" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/dataset_head.jpg">
+</p>
 
 ### Summary and Insights 
 
@@ -149,6 +157,7 @@ Both the train and test datasets are quite consistent in terms of the types of f
 | ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/github.jpg) | Developer platform  |
 
 ## Exploratory Data Analysis (EDA)
+
 
 ```ruby
 train_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8, color='green');
