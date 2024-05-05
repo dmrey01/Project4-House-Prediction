@@ -15,7 +15,8 @@
 8. [Machine Learning Modeling](#machine-learning-modeling)
 9. [Blending All Models](#blending-all-models)
 10. [Evaluation and Submissions](#evaluation-and-submissions)
-11. [Conclusion](#Conclusion)
+11. [Key Insights](#key-insights)
+12. [Conclusion](#Conclusion)
 
 ## Project Overview
 This project focuses on developing a predictive model for housing prices using various machine learning techniques. The primary goal is to **accurately predict house sales prices based on a comprehensive dataset that includes numerous features related to property characteristics** such as area, quality, condition, and location.
@@ -44,7 +45,7 @@ Several models were explored and evaluated for their effectiveness in predicting
 | Simple Average Blend  | 0.1631  |
 
 <p align="left">
-  <img width="650" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
+  <img width="600" height="400" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
 </p>
 
 ### Model Summary with RMSE Error
@@ -585,30 +586,105 @@ plt.show()
 
 ![alt text](4.Other/image-8.png)
 
+**SDisplay summary statistics**
+```ruby
+# Load the test CSV file
+data = pd.read_csv('test.csv')
+
+# Display summary statistics
+summary = data.describe()
+
+# Print the summary
+print(summary)
+```
+```python
+                Id   MSSubClass  LotFrontage       LotArea  OverallQual  \
+count  1459.000000  1459.000000  1232.000000   1459.000000  1459.000000   
+mean   2190.000000    57.378341    68.580357   9819.161069     6.078821   
+std     421.321334    42.746880    22.376841   4955.517327     1.436812   
+min    1461.000000    20.000000    21.000000   1470.000000     1.000000   
+25%    1825.500000    20.000000    58.000000   7391.000000     5.000000   
+50%    2190.000000    50.000000    67.000000   9399.000000     6.000000   
+75%    2554.500000    70.000000    80.000000  11517.500000     7.000000   
+max    2919.000000   190.000000   200.000000  56600.000000    10.000000   
+
+       OverallCond    YearBuilt  YearRemodAdd   MasVnrArea   BsmtFinSF1  ...  \
+count  1459.000000  1459.000000   1459.000000  1444.000000  1458.000000  ...   
+mean      5.553804  1971.357779   1983.662783   100.709141   439.203704  ...   
+std       1.113740    30.390071     21.130467   177.625900   455.268042  ...   
+min       1.000000  1879.000000   1950.000000     0.000000     0.000000  ...   
+25%       5.000000  1953.000000   1963.000000     0.000000     0.000000  ...   
+50%       5.000000  1973.000000   1992.000000     0.000000   350.500000  ...   
+75%       6.000000  2001.000000   2004.000000   164.000000   753.500000  ...   
+max       9.000000  2010.000000   2010.000000  1290.000000  4010.000000  ...   
+
+        GarageArea   WoodDeckSF  OpenPorchSF  EnclosedPorch    3SsnPorch  \
+count  1458.000000  1459.000000  1459.000000    1459.000000  1459.000000   
+mean    472.768861    93.174777    48.313914      24.243317     1.794380   
+std     217.048611   127.744882    68.883364      67.227765    20.207842   
+min       0.000000     0.000000     0.000000       0.000000     0.000000   
+25%     318.000000     0.000000     0.000000       0.000000     0.000000   
+50%     480.000000     0.000000    28.000000       0.000000     0.000000   
+75%     576.000000   168.000000    72.000000       0.000000     0.000000   
+max    1488.000000  1424.000000   742.000000    1012.000000   360.000000   
+
+       ScreenPorch     PoolArea       MiscVal       MoSold       YrSold  
+count  1459.000000  1459.000000   1459.000000  1459.000000  1459.000000  
+mean     17.064428     1.744345     58.167923     6.104181  2007.769705  
+std      56.609763    30.491646    630.806978     2.722432     1.301740  
+min       0.000000     0.000000      0.000000     1.000000  2006.000000  
+25%       0.000000     0.000000      0.000000     4.000000  2007.000000  
+50%       0.000000     0.000000      0.000000     6.000000  2008.000000  
+75%       0.000000     0.000000      0.000000     8.000000  2009.000000  
+max     576.000000   800.000000  17000.000000    12.000000  2010.000000  
+
+[8 rows x 37 columns]
+```
+
 ## Machine Learning Modeling
-:
 
-Lasso Regression: Utilized for its ability to perform feature selection by shrinking the coefficients of less important features to zero.
-Gradient Boosting Regressor: Chosen for its ability to handle non-linear data and provide robust predictive power through ensemble learning.
-Random Forest Regressor: Selected for its versatility and reliability, providing excellent results particularly in terms of handling a variety of data types and feature importance determination.
-Key Results
-Model Comparison: 
-Feature Importance: Analysis revealed that certain features, such as OverallQual and GrLivArea, were highly predictive of house prices, guiding feature selection and engineering efforts.
-Optimization: Parameter tuning was performed, particularly for the Random Forest and Gradient Boosting models, to enhance model accuracy and efficiency.
+Each model's **predictive power is assessed by calculating the RMSE on the validation dataset**, which quantifies the average magnitude of the model's prediction errors. 
 
-8 Machine Learning Algorithms were ran in this project.
+**A lower RMSE indicates better predictive accuracy.**
 
-- Supervised
+The systematic approach to tuning model parameters (like **alpha for Lasso and n_estimators for Gradient Boosting**) and its comprehensive validation demonstrate an effective use of scikit-learn's capabilities to optimize model performance.
+
+
+**8 Machine Learning Algorithms were ran in this project.**
+
+- **Supervised**
     - Classification:
     - Regression: Linear Regression / Ridge / Lasso / ElasticNet
-- Unsupervised
+- **Unsupervised**
     - Clustering: ESupport Vector Machine
-- Ensemble Methods
+- **Ensemble Methods**
     - RandomForest / XGBoost / LGBM / CatBoost
 
-## Blending All Models
+
 
 ## Evaluation and Submissions
+
+- **#1 Gradient Boosting Regressor:** Chosen for its ability to handle non-linear data and provide robust predictive power through ensemble learning. This is a powerful ensemble technique that builds multiple models sequentially, each new model correcting errors made by the previous ones. **The notebook explores different numbers of estimators to optimize performance. The use of RMSE as an evaluation metric helps demonstrate the impact of increasing complexity (more estimators) on model accuracy.**
+
+- **#2 (tie) Lasso Regression:** Utilized for its ability to perform feature selection by shrinking the coefficients of less important features to zero. **This model uses L1 regularization to penalize the absolute size of coefficients. By varying the alpha parameter, which controls the strength of the regularization, the notebook shows how Lasso regression can prevent overfitting**, particularly in a dataset that may have multicollinearity or irrelevant features. The RMSE scores are computed to evaluate how well the model performs on unseen data.
+
+- **#2 (tie) Random Forest Regressor:** Selected for its versatility and reliability, providing excellent results particularly in terms of handling a variety of data types and feature importance determination.
+
+## Key Insights
+1. **Feature Correlation with SalePrice:**
+- The EDA revealed **significant correlations between SalePrice and certain features like OverallQual (overall material and finish quality), GrLivArea (above grade living area square feet), and GarageCars (size of garage in car capacity).** This insight informed the selection of features and emphasized the importance of these variables in the regression models. Models like Lasso Regression and Gradient Boosting were configured to focus on such highly correlated features to improve accuracy.
+
+2. **Distribution of Target Variable (SalePrice):**
+- **The distribution of SalePrice was analyzed, showing a skewed pattern.** This prompted the use of logarithmic transformations of SalePrice during model training and validation to normalize the distribution and improve model performance, a technique evident in the RMSE calculations where logarithmic errors were used.
+
+3. **Missing Values and Data Completeness:**
+- During the EDA, **missing values were identified in several features.** Handling these missing values through imputation (filling missing values with the mean for numerical features) was critical for preparing the dataset for modeling. This was especially important for models that do not inherently handle missing values, like Lasso and Gradient Boosting.
+
+4. **Impact of Feature Quality on Price:**
+- Visualizations such as **box plots of SalePrice across different levels of OverallQual demonstrated a clear positive relationship between property quality and price.** This insight was used to prioritize features reflecting property quality in model training, influencing the selection of features in models and the interpretation of model coefficients in Lasso Regression.
+
+5. **Outlier Detection:**
+- EDA included analysis and visualization of potential outliers, particularly in key features like GrLivArea. **The presence of outliers influenced the decision to use models robust to outliers.** Gradient Boosting, for example, can handle outliers better than some other algorithms due to its sequential approach that focuses on correcting previous errors, including those potentially caused by outliers.
 
 ## Conclusion
 This project successfully demonstrates the application of advanced machine learning techniques to real-world data. The models developed not only provide accurate predictions of house prices but also offer insights into the factors that most significantly affect residential property values.
