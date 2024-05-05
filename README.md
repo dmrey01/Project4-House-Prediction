@@ -282,7 +282,7 @@ print(test_df.info())
 print("***Test dataset shape is {}***".format(test_df.shape))
 ```
 <p align="left">
-  <img width="650" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/dtype_list.jpg">
+  <img width="450" height="350" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/dtype_list.jpg">
 </p>
 
 
@@ -325,16 +325,29 @@ Both the train and test datasets are quite consistent in terms of the types of f
 # Check distribution of target variable
 print(train_df['SalePrice'].describe())
 ```
-
-| count   |   1460.000000  |
-| mean  |   180921.195890  |
-| std   |   79442.502883 |
-| min   |    34900.000000 |
-| 25%  |    129975.000000 |
-| 50%  |    163000.000000 |
-| 75%  |    214000.000000 |
-| max  |    755000.000000 |
+```ruby
+count      1460.000000
+mean     180921.195890
+std       79442.502883
+min       34900.000000
+25%      129975.000000
+50%      163000.000000
+75%      214000.000000
+max      755000.000000
 Name: SalePrice, dtype: float64
+```
+
+```python
+count      1460.000000
+mean     180921.195890
+std       79442.502883
+min       34900.000000
+25%      129975.000000
+50%      163000.000000
+75%      214000.000000
+max      755000.000000
+Name: SalePrice, dtype: float64
+```
 
 ```ruby
 # List quantitative fields
