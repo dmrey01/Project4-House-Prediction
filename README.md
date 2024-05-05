@@ -324,6 +324,9 @@ Both the train and test datasets are quite consistent in terms of the types of f
 
 ![alt text](image.png)
 
+![alt text](4.Other/image-1.png)
+
+
 ## Data Source
 | Data Source  | Description |
 | ------------- | ------------- |
@@ -458,7 +461,7 @@ plt.show()
 ![alt text](image-4.png)
 
 ```ruby
-# Ensure only numerical columns are considered for the correlation matrix
+# Correlation matrix
 
 # Load the dataset
 data = pd.read_csv('train.csv')
