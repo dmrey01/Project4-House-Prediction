@@ -1,7 +1,7 @@
 # --IN PROGRESS-- Project-4: House Price Prediction using various ML techniques :house_with_garden:	
 
 <p align="center">
-  <img width="550" height="550" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/house_pic.jpg">
+  <img width="500" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/house_pic.jpg">
 </p>
 
 ## Table of Contents
@@ -22,6 +22,13 @@ This project focuses on developing a predictive model for housing prices using v
 
 ## Results Summary
 
+Several models were explored and evaluated for their effectiveness in predicting house prices. 
+
+**Key Results**
+- **Model Comparison:** The models were evaluated based on the **Root Mean Square Error (RMSE)**, with the *Gradient Boosting, Lasso Regression and Random Forest models* showing particularly promising results.
+- **Feature Importance:** Analysis revealed that certain features, such as *OverallQual and GrLivArea*, were highly predictive of house prices, guiding feature selection and engineering efforts.
+- **Optimization:** **Parameter tuning was performed**, particularly for the Random Forest and Gradient Boosting models, to enhance model accuracy and efficiency.
+
 ### Performance Table
 
 | **ML Technique**  | **RMSE Error** |
@@ -40,6 +47,8 @@ This project focuses on developing a predictive model for housing prices using v
   <img width="850" height="650" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
 </p>
 
+### Model Comparison
+
 1. **Gradient Boosting Model (0.1431):**
 - **Performance:** Best performing model.
 - **Interpretation:** This model has the lowest RMSE, indicating it has the best predictive accuracy among the models listed. Gradient Boosting effectively handles both linear and non-linear relationships by building an ensemble of weak prediction models, typically decision trees.
@@ -53,8 +62,8 @@ This project focuses on developing a predictive model for housing prices using v
 - **Interpretation:** Shows robust performance, slightly varied between implementations. Random Forest is effective due to its method of averaging multiple deep decision trees, trained on different parts of the same training set, which reduces overfitting and variance.
 
 4. **Simple Average Blend (0.1631):**
-- Performance:** Mid-tier performance.
-Interpretation:** This technique involves averaging the predictions of multiple models. It's a straightforward ensemble method that can yield decent results by blending different model outputs, reducing variance but not always capturing complex patterns effectively.
+- **Performance:** Mid-tier performance.
+- **Interpretation:** This technique involves averaging the predictions of multiple models. It's a straightforward ensemble method that can yield decent results by blending different model outputs, reducing variance but not always capturing complex patterns effectively.
 
 5. **Linear Regression Model (0.1897):**
 - **Performance:** Lower middle performance.
@@ -98,22 +107,12 @@ The datasets utilized in this project contains detailed information on residenti
 
 ### Test Dataset Analysis
 
-The test.csv dataset includes data on **1,459 properties with the same 80 features** as in the train.csv dataset (excluding SalePrice). Here are some key observations:
+The test dataset includes data on **1,459 properties with the same 80 features** as in the train dataset (excluding *SalePrice*). Here are some key observations:
 
 **General Structure**
 - **Total Entries:** 1,459
 
 - **Total Features:** 80 (one less than the train set due to the absence of the target variable SalePrice).
-
-**Data Completeness**
-Missing Data: As with the train dataset, there are several features with missing values:
-LotFrontage: 227 missing values.
-Alley: 1,352 missing values (indicating similar absence of alley access as in the train set).
-MasVnrType and MasVnrArea: Missing in 16 and 15 entries respectively.
-BsmtQual, BsmtCond, BsmtExposure, BsmtFinType1, BsmtFinType2: Each feature has roughly 40-45 missing entries, similar to the train set.
-Categorical and Numeric Distribution
-Many features are categorical and will require encoding for analysis or modeling.
-Numeric features show a similar range and distribution as the training set, suggesting consistency across both datasets.
 
 ### Summary and Insights 
 
@@ -142,21 +141,25 @@ Both the train and test datasets are quite consistent in terms of the types of f
 |![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/8841ac4f-3cbe-49c0-a2f4-c0acb1100224)  | Data manipulation and analysis  |
 | ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/4bf0c856-4875-4ff1-8ebd-03c0e66ebd14) | Numerical computations  |
 | ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/0edbd134-7e50-4c13-9a74-4f6b8350ba57) | 2D plotting  |
-| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/76cae272-4bcc-4ab2-a376-880cd1d28190) | High-level plotting API   |
-| ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/3e7c0369-6e67-4080-81bc-ee7d214f80c0) |  Scientific and technical computing  |
+| ![image]() | Machine learning library   |
+| ![image]() |  Library for creating statistical graphics and visualizing data  |
+| ![image]() |  Visual analytics platform  |
+| ![image]() |  Hosted Jupyter Notebook service  |
+| ![image]() |  Presentation program  |
+| ![image]() |  Developer platform  |
 
 ## Exploratory Data Analysis (EDA)
 
 ## Data Visualizations
 
 ## Machine Learning Modeling
-Several models were explored and evaluated for their effectiveness in predicting house prices:
+:
 
 Lasso Regression: Utilized for its ability to perform feature selection by shrinking the coefficients of less important features to zero.
 Gradient Boosting Regressor: Chosen for its ability to handle non-linear data and provide robust predictive power through ensemble learning.
 Random Forest Regressor: Selected for its versatility and reliability, providing excellent results particularly in terms of handling a variety of data types and feature importance determination.
 Key Results
-Model Comparison: The models were evaluated based on the Root Mean Square Error (RMSE), with the Gradient Boosting and Random Forest models showing particularly promising results.
+Model Comparison: 
 Feature Importance: Analysis revealed that certain features, such as OverallQual and GrLivArea, were highly predictive of house prices, guiding feature selection and engineering efforts.
 Optimization: Parameter tuning was performed, particularly for the Random Forest and Gradient Boosting models, to enhance model accuracy and efficiency.
 
