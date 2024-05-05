@@ -105,6 +105,8 @@ The datasets utilized in this project contains detailed information on residenti
 - Many features are **categorical** (e.g., Street, LotShape, Utilities), requiring encoding for machine learning applications.
 - **Numeric** data spans across discrete and continuous variables, with different scales and distributions, which may need standardization or normalization.
 
+**Display the first five rows of the DataFrame train_df**
+
 ```ruby
 train_df.head()
 ```
@@ -270,45 +272,19 @@ The test dataset includes data on **1,459 properties with the same 80 features**
 
 - **Total Features:** 80 (one less than the train set due to the absence of the target variable SalePrice).
 
+**Display basic info**
+
 ```ruby
-# Display basic info
 print(train_df.info())
 print("***Train dataset shape is {}***".format(train_df.shape))
 
 print(test_df.info())
 print("***Test dataset shape is {}***".format(test_df.shape))
 ```
+<p align="left">
+  <img width="650" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/dtype_list.jpg">
+</p>
 
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 1460 entries, 0 to 1459
-Data columns (total 81 columns):
- #   Column         Non-Null Count  Dtype  
----  ------         --------------  -----  
- 0   Id             1460 non-null   int64  
- 1   MSSubClass     1460 non-null   int64  
- 2   MSZoning       1460 non-null   object 
- 3   LotFrontage    1201 non-null   float64
- 4   LotArea        1460 non-null   int64  
- 5   Street         1460 non-null   object 
- 6   Alley          91 non-null     object 
- 7   LotShape       1460 non-null   object 
- 8   LandContour    1460 non-null   object 
- 9   Utilities      1460 non-null   object 
- 10  LotConfig      1460 non-null   object 
- 11  LandSlope      1460 non-null   object 
- 12  Neighborhood   1460 non-null   object 
- 13  Condition1     1460 non-null   object 
- 14  Condition2     1460 non-null   object 
- 15  BldgType       1460 non-null   object 
- 16  HouseStyle     1460 non-null   object 
- 17  OverallQual    1460 non-null   int64  
- 18  OverallCond    1460 non-null   int64  
- 19  YearBuilt      1460 non-null   int64  
-...
-dtypes: float64(11), int64(26), object(43)
-memory usage: 912.0+ KB
-None
-***Test dataset shape is (1459, 80)***
 
 ### Summary and Insights 
 
@@ -322,9 +298,7 @@ Both the train and test datasets are quite consistent in terms of the types of f
 - **TotalBsmtSF**: Total square feet of basement area
 - **FullBath**: Full bathrooms above grade
 
-![alt text](image.png)
-
-![alt text](4.Other/image-1.png)
+![alt text](4.Other/image.png)
 
 
 ## Data Source
@@ -352,14 +326,14 @@ Both the train and test datasets are quite consistent in terms of the types of f
 print(train_df['SalePrice'].describe())
 ```
 
-count      1460.000000
-mean     180921.195890
-std       79442.502883
-min       34900.000000
-25%      129975.000000
-50%      163000.000000
-75%      214000.000000
-max      755000.000000
+| count   |   1460.000000  |
+| mean  |   180921.195890  |
+| std   |   79442.502883 |
+| min   |    34900.000000 |
+| 25%  |    129975.000000 |
+| 50%  |    163000.000000 |
+| 75%  |    214000.000000 |
+| max  |    755000.000000 |
 Name: SalePrice, dtype: float64
 
 ```ruby
@@ -420,12 +394,12 @@ Length: 81, dtype: int64
 ```ruby
 train_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8, color='green');
 ```
-![alt text](image-1.png)
+![alt text](4.Other/image-1.png)
 
 ```ruby
 test_df.hist(figsize=(16, 20), bins=50, xlabelsize=8, ylabelsize=8);
 ```
-![alt text](image-2.png)
+![alt text](4.Other/image-2.png)
 
 
 ```ruby
@@ -442,7 +416,7 @@ plt.ylabel('Frequency')
 plt.show()
 ```
 
-![alt text](image-3.png)
+![alt text](4.Other/image-3.png)
 
 ```ruby
 # Boxplot of SalePrice by OverallQual
@@ -458,7 +432,7 @@ plt.ylabel('Sale Price')
 plt.show()
 ```
 
-![alt text](image-4.png)
+![alt text](4.Other/image-4.png)
 
 ```ruby
 # Correlation matrix
@@ -476,7 +450,7 @@ plt.title('Feature Correlation Matrix')
 plt.show()
 ```
 
-![alt text](image-5.png)
+![alt text](4.Other/image-5.png)
 
 ```ruby
 # Pairplot for selected features
@@ -488,7 +462,7 @@ sns.pairplot(train_df[['SalePrice', 'OverallQual', 'GrLivArea', 'GarageCars']])
 plt.show()
 ```
 
-![alt text](image-6.png)
+![alt text](4.Other/image-6.png)
 
 ```ruby
 #  Scatter Plot of TotalBsmtSF vs 1stFlrSF
@@ -507,7 +481,7 @@ plt.ylabel('First Floor Area (sq ft)')
 plt.show()
 ```
 
-![alt text](image-7.png)
+![alt text](4.Other/image-7.png)
 
 ```ruby
 #  Scatter Plot of YearBuilt vs GrLivArea
@@ -526,7 +500,7 @@ plt.ylabel('Ground Living Area (sq ft)')
 plt.show()
 ```
 
-![alt text](image-8.png)
+![alt text](4.Other/image-8.png)
 
 ## Machine Learning Modeling
 :
