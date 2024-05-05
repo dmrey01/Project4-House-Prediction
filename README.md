@@ -141,12 +141,12 @@ Both the train and test datasets are quite consistent in terms of the types of f
 |![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/8841ac4f-3cbe-49c0-a2f4-c0acb1100224)  | Data manipulation and analysis  |
 | ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/4bf0c856-4875-4ff1-8ebd-03c0e66ebd14) | Numerical computations  |
 | ![image](https://github.com/AAlbers341/project1_coffee_analysis/assets/137431770/0edbd134-7e50-4c13-9a74-4f6b8350ba57) | 2D plotting  |
-| ![image]() | Machine learning library   |
-| ![image]() |  Library for creating statistical graphics and visualizing data  |
-| ![image]() |  Visual analytics platform  |
-| ![image]() |  Hosted Jupyter Notebook service  |
-| ![image]() |  Presentation program  |
-| ![image]() |  Developer platform  |
+| ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/scikit.jpg) | Machine learning library   |
+| ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/seaborn.jpg) | Library for creating statistical graphics and visualizing data  |
+| ![image](https://github.com/dmrey01/Project-4/blob/main/4.Other/tableau.jpg) | Visual analytics platform  |
+| ![image]() | Hosted Jupyter Notebook service  |
+| ![image]() | Presentation program  |
+| ![image]() | Developer platform  |
 
 ## Exploratory Data Analysis (EDA)
 
