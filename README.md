@@ -29,22 +29,6 @@ Several models were explored and evaluated for their effectiveness in predicting
 - **Feature Importance:** Analysis revealed that certain features, such as *OverallQual and GrLivArea*, were highly predictive of house prices, guiding feature selection and engineering efforts.
 - **Optimization:** **Parameter tuning was performed**, particularly for the *Random Forest and Gradient Boosting models*, to enhance model accuracy and efficiency.
 
-## Key Insights
-1. **Feature Correlation with SalePrice:**
-- The EDA revealed **significant correlations between SalePrice and certain features like OverallQual (overall material and finish quality), GrLivArea (above grade living area square feet), and GarageCars (size of garage in car capacity).** This insight informed the selection of features and emphasized the importance of these variables in the regression models. Models like Lasso Regression and Gradient Boosting were configured to focus on such highly correlated features to improve accuracy.
-
-2. **Distribution of Target Variable (SalePrice):**
-- **The distribution of SalePrice was analyzed, showing a skewed pattern.** This prompted the use of logarithmic transformations of SalePrice during model training and validation to normalize the distribution and improve model performance, a technique evident in the RMSE calculations where logarithmic errors were used.
-
-3. **Missing Values and Data Completeness:**
-- During the EDA, **missing values were identified in several features.** Handling these missing values through imputation (filling missing values with the mean for numerical features) was critical for preparing the dataset for modeling. This was especially important for models that do not inherently handle missing values, like Lasso and Gradient Boosting.
-
-4. **Impact of Feature Quality on Price:**
-- Visualizations such as **box plots of SalePrice across different levels of OverallQual demonstrated a clear positive relationship between property quality and price.** This insight was used to prioritize features reflecting property quality in model training, influencing the selection of features in models and the interpretation of model coefficients in Lasso Regression.
-
-5. **Outlier Detection:**
-- EDA included analysis and visualization of potential outliers, particularly in key features like GrLivArea. **The presence of outliers influenced the decision to use models robust to outliers.** Gradient Boosting, for example, can handle outliers better than some other algorithms due to its sequential approach that focuses on correcting previous errors, including those potentially caused by outliers.
-
 ## Performance Table
 
 | **ML Technique**  | **RMSE Error** |
@@ -62,6 +46,22 @@ Several models were explored and evaluated for their effectiveness in predicting
 <p align="left">
   <img width="600" height="400" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/ml_model_by_rmse.jpg">
 </p>
+
+## Key Insights
+1. **Feature Correlation with SalePrice:**
+- The EDA revealed **significant correlations between *SalePrice* and certain features like *OverallQual* (overall material and finish quality), *GrLivArea* (above grade living area square feet), and *GarageCars* (size of garage in car capacity).** This insight informed the selection of features and emphasized the importance of these variables in the regression models. Models like Lasso Regression and Gradient Boosting were configured to focus on such highly correlated features to improve accuracy.
+
+2. **Distribution of Target Variable (SalePrice):**
+- **The distribution of *SalePrice* was analyzed, showing a skewed pattern.** This prompted the use of logarithmic transformations of *SalePrice* during model training and validation to normalize the distribution and improve model performance, a technique evident in the RMSE calculations where logarithmic errors were used.
+
+3. **Missing Values and Data Completeness:**
+- During the EDA, **missing values were identified in several features.** Handling these missing values through imputation (filling missing values with the mean for numerical features) was critical for preparing the dataset for modeling. This was especially important for models that do not inherently handle missing values, like *Lasso and Gradient Boosting*.
+
+4. **Impact of Feature Quality on Price:**
+- Visualizations such as **box plots of *SalePrice* across different levels of *OverallQual* demonstrated a clear positive relationship between property quality and price.** This insight was used to prioritize features reflecting property quality in model training, influencing the selection of features in models and the interpretation of model coefficients in Lasso Regression.
+
+5. **Outlier Detection:**
+- EDA included analysis and visualization of potential outliers, particularly in key features like *GrLivArea*. **The presence of outliers influenced the decision to use models robust to outliers.** *Gradient Boosting*, for example, can handle outliers better than some other algorithms due to its sequential approach that focuses on correcting previous errors, including those potentially caused by outliers.
 
 ### Model Summary with RMSE Error
 
@@ -1245,9 +1245,13 @@ Validation RMSE for simple average blend: 0.16307987309213423
 
 - **#1 Gradient Boosting Regressor:** Chosen for its ability to handle non-linear data and provide robust predictive power through ensemble learning. This is a powerful ensemble technique that builds multiple models sequentially, each new model correcting errors made by the previous ones. **The notebook explores different numbers of estimators to optimize performance. The use of RMSE as an evaluation metric helps demonstrate the impact of increasing complexity (more estimators) on model accuracy.**
 
-- **#2 (tie) Lasso Regression:** Utilized for its ability to perform feature selection by shrinking the coefficients of less important features to zero. **This model uses L1 regularization to penalize the absolute size of coefficients. By varying the alpha parameter, which controls the strength of the regularization, the notebook shows how Lasso regression can prevent overfitting**, particularly in a dataset that may have multicollinearity or irrelevant features. The RMSE scores are computed to evaluate how well the model performs on unseen data.
+- **#2 (tie) Lasso Regression:** Utilized for its ability to perform feature selection by shrinking the coefficients of less important features to zero. This model uses L1 regularization to penalize the absolute size of coefficients. **By varying the alpha parameter, which controls the strength of the regularization, the notebook shows how Lasso regression can prevent overfitting**, particularly in a dataset that may have multicollinearity or irrelevant features. The RMSE scores are computed to evaluate how well the model performs on unseen data.
 
 - **#2 (tie) Random Forest Regressor:** Selected for its versatility and reliability, providing excellent results particularly in terms of handling a variety of data types and feature importance determination.
 
 ## Conclusion
-This project successfully demonstrates the application of advanced machine learning techniques to real-world data. The models developed not only provide accurate predictions of house prices but also offer insights into the factors that most significantly affect residential property values.
+This project has **successfully demonstrated the application of various advanced machine learning techniques to predict house prices** using real-world data from Ames, Iowa. Through rigorous experimentation and evaluation, we have developed models that not only predict prices with considerable accuracy but also reveal significant insights into the factors influencing residential property values.
+
+**Challenges and Lessons Learned:**
+- Throughout this project, we faced several challenges including dealing with **missing data, selecting the most impactful features, and tuning hyperparameters for optimal model performance.**
+- Handling skewed data and transforming categorical data presented significant hurdles that were overcome through careful data preprocessing and feature engineering. From these challenges, **we learned the importance of meticulous data analysis and gained a deeper understanding of model sensitivity to data quality and feature selection.**
