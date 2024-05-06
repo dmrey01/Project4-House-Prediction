@@ -1,4 +1,4 @@
-# Project-4: House Price Prediction using various ML techniques :house_with_garden:	
+# Project 4: House Price Prediction using various ML techniques :house_with_garden:	
 
 <p align="center">
   <img width="500" height="500" src="https://github.com/dmrey01/Project-4/blob/main/4.Other/house_pic.jpg">
