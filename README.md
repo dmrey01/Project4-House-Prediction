@@ -13,9 +13,8 @@
 6. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 7. [Data Visualizations](#data-visualizations)
 8. [Machine Learning Modeling](#machine-learning-modeling)
-9. [Blending All Models](#blending-all-models)
-10. [Evaluation and Submissions](#evaluation-and-submissions)
-11. [Conclusion](#Conclusion)
+9. [Evaluation and Submissions](#evaluation-and-submissions)
+10. [Conclusion](#Conclusion)
 
 ## Project Overview
 This project focuses on developing a predictive model for housing prices using various machine learning techniques. The primary goal is to **accurately predict house sales prices based on a comprehensive dataset that includes numerous features related to property characteristics** such as area, quality, condition, and location.
