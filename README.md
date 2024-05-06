@@ -479,6 +479,9 @@ Length: 81, dtype: int64
 
 ## Data Visualizations
 
+**Please visit our Tableau Public website via the link below to access additional data visualizations related to the project.**
+[House Prediction Data Visualizations on Tableau Public](https://public.tableau.com/app/profile/dawn.reynoso/viz/Project4Group3-final/HousePriceOverallCondition?publish=yes).
+
 **Histograms for each numerical column, *train* dataset**
 
 ```ruby
